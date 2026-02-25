@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RandoSpot - Suppression de compte</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9fafb;
+      padding: 20px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    header {
+      background: #2d6a4f;
+      color: #fff;
+      padding: 32px 24px;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    header h1 { font-size: 24px; margin-bottom: 4px; }
+    header p { font-size: 14px; opacity: 0.85; }
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    h2 { font-size: 20px; color: #2d6a4f; margin-bottom: 16px; }
+    h3 { font-size: 16px; color: #2d6a4f; margin: 16px 0 8px; }
+    p { margin-bottom: 12px; }
+    ul { margin: 8px 0 16px 24px; }
+    li { margin-bottom: 6px; }
+    .steps { counter-reset: step; list-style: none; margin-left: 0; }
+    .steps li {
+      counter-increment: step;
+      padding: 12px 16px;
+      background: #f0fdf4;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      padding-left: 48px;
+      position: relative;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 16px;
+      top: 12px;
+      background: #2d6a4f;
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .email-link {
+      display: inline-block;
+      background: #2d6a4f;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .email-link:hover { background: #1b4332; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #888;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>RandoSpot</h1>
+      <p>Suppression de compte et des donn&eacute;es</p>
+    </header>
+
+    <section>
+      <h2>Supprimer votre compte depuis l'application</h2>
+      <p>Vous pouvez supprimer votre compte et toutes vos donn&eacute;es directement depuis l'application RandoSpot :</p>
+      <ol class="steps">
+        <li>Ouvrez l'application RandoSpot</li>
+        <li>Acc&eacute;dez &agrave; l'onglet <strong>Profil</strong></li>
+        <li>Appuyez sur <strong>Param&egrave;tres</strong></li>
+        <li>Faites d&eacute;filer vers le bas et appuyez sur <strong>Supprimer mon compte</strong></li>
+        <li>Confirmez la suppression</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Supprimer votre compte par email</h2>
+      <p>Si vous ne pouvez pas acc&eacute;der &agrave; l'application, vous pouvez demander la suppression de votre compte en envoyant un email &agrave; :</p>
+      <a href="mailto:contact@randospot.app?subject=Demande de suppression de compte RandoSpot" class="email-link">contact@randospot.app</a>
+      <p style="margin-top: 16px;">Merci d'indiquer l'adresse email associ&eacute;e &agrave; votre compte. Votre demande sera trait&eacute;e sous 48 heures.</p>
+    </section>
+
+    <section>
+      <h2>Donn&eacute;es supprim&eacute;es</h2>
+      <p>Lorsque vous supprimez votre compte, les donn&eacute;es suivantes sont d&eacute;finitivement effac&eacute;es :</p>
+      <ul>
+        <li>Votre profil (nom d'utilisateur, bio, avatar)</li>
+        <li>Vos &eacute;v&eacute;nements cr&eacute;&eacute;s</li>
+        <li>Vos sentiers partag&eacute;s</li>
+        <li>Vos messages (chat de groupe et messages priv&eacute;s)</li>
+        <li>Vos avis et notes</li>
+        <li>Vos photos</li>
+        <li>Vos badges</li>
+        <li>Vos abonnements (follows)</li>
+        <li>Vos favoris</li>
+      </ul>
+      <p><strong>Cette action est irr&eacute;versible.</strong> Une fois votre compte supprim&eacute;, vos donn&eacute;es ne pourront pas &ecirc;tre r&eacute;cup&eacute;r&eacute;es.</p>
+    </section>
+
+    <footer>
+      &copy; 2025 RandoSpot - Tous droits r&eacute;serv&eacute;s
+    </footer>
+  </div>
+</body>
+</html>
