@@ -5,7 +5,7 @@
 // fait que le transmettre avec le bon type, pour que Facebook sache le lire.
 const UPSTREAM = "https://pynsbltnxiivwetngkvt.supabase.co/functions/v1/share/e/";
 // À augmenter quand le dessin des images change, pour ne pas resservir les anciennes.
-const VERSION = "2";
+const VERSION = "3";
 
 export async function onRequestGet({ params }) {
   const path = Array.isArray(params.path) ? params.path.join("/") : String(params.path || "");
