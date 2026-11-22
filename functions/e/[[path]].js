@@ -4,6 +4,8 @@
 // Tout le contenu est fabriqué par la fonction "share" de Supabase ; ce fichier ne
 // fait que le transmettre avec le bon type, pour que Facebook sache le lire.
 const UPSTREAM = "https://pynsbltnxiivwetngkvt.supabase.co/functions/v1/share/e/";
+// À augmenter quand le dessin des images change, pour ne pas resservir les anciennes.
+const VERSION = "2";
 
 export async function onRequestGet({ params }) {
   const path = Array.isArray(params.path) ? params.path.join("/") : String(params.path || "");
@@ -13,7 +15,7 @@ export async function onRequestGet({ params }) {
   const isImage = path.endsWith(".png");
   let upstream;
   try {
-    upstream = await fetch(UPSTREAM + path);
+    upstream = await fetch(UPSTREAM + path + "?v=" + VERSION);
   } catch {
     return new Response("Service momentanément indisponible", { status: 502 });
   }
